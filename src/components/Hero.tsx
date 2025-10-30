@@ -26,7 +26,7 @@ const Hero = () => {
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
             Hi, I'm{" "}
             <span className="bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent">
-              Igasubiza Vainqueur
+              Igasubiza Vainqueur Filose Maximi
             </span>
           </h1>
           
