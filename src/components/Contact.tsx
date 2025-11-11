@@ -6,19 +6,19 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "your.email@example.com",
+      value: "igasubizavainqueurfilosemaximi@gmail.com",
       href: "mailto:your.email@example.com",
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567",
+      value: "+250 796 018 772",
+      href: "null",
     },
     {
       icon: MapPin,
       label: "Location",
-      value: "San Francisco, CA",
+      value: "RWANDA,Musanze ",
       href: null,
     },
   ];
@@ -70,20 +70,30 @@ const Contact = () => {
 
         <div className="mt-12 text-center">
           <p className="text-muted-foreground mb-4">
-            Or connect with me on social media
+            hura nenge unyuze kuri zi mbuga...
           </p>
           <div className="flex gap-4 justify-center">
             <a 
-              href="https://github.com" 
+              href="https://github.com/igasubizavainqueurfilosemaximi" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
             >
               GitHub
             </a>
+ <span className="text-muted-foreground">•</span>
+            <a
+
+            href="https://instagram.com/vain_queu_r"
+            target="_blank"
+            rel="noonpener noreferrer"
+            className="text-muted-foreground hover:text-primary transition-colors"
+            >
+               
+              instagram</a>
             <span className="text-muted-foreground">•</span>
             <a 
-              href="https://linkedin.com" 
+              href="https://linkedin.com/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
@@ -92,7 +102,7 @@ const Contact = () => {
             </a>
             <span className="text-muted-foreground">•</span>
             <a 
-              href="https://twitter.com" 
+              href="https://twitter.com/igasubizvainqueurfilosemaximi" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"

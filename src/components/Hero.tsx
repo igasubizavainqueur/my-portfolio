@@ -1,4 +1,4 @@
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowDown, Github, Instagram, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroBg from "@/assets/hero-bg.jpg";
 
@@ -24,9 +24,9 @@ const Hero = () => {
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
-            Hi, I'm{" "}
+            
             <span className="bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent">
-              Igasubiza Vainqueur Filose Maximi
+              Igasubiza Vainqueur Filose Maximilian
             </span>
           </h1>
           
@@ -64,6 +64,14 @@ const Hero = () => {
               className="p-3 rounded-full bg-secondary/50 hover:bg-secondary border border-border hover:border-primary/50 transition-all hover:scale-110"
             >
               <Github className="w-5 h-5" />
+            </a>
+            <a 
+              href="https://instagram.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="p-3 rounded-full bg-secondary/50 hover:bg-secondary border border-border hover:border-primary/50 transition-all hover:scale-110"
+            >
+              <Instagram className="w-5 h-5" />
             </a>
             <a 
               href="https://linkedin.com" 
