@@ -2,11 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
 */
 
-@layer base {
+  /* Base styles */
   :root {
     --background: 0 0% 100%;
     --foreground: 220 18% 8%;
@@ -42,12 +44,46 @@ All colors MUST be HSL.
     --gradient-primary: linear-gradient(135deg, hsl(189 94% 55%), hsl(220 90% 65%));
     --gradient-card: linear-gradient(145deg, hsl(0 0% 98%), hsl(209, 76%, 13%));
     
+    /* Dark mode overrides will be applied when .dark class is present */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --background: 220 18% 8%;
+        --foreground: 0 0% 98%;
+        --card: 220 18% 8%;
+        --card-foreground: 0 0% 98%;
+        --popover: 220 18% 8%;
+        --popover-foreground: 0 0% 98%;
+        --primary: 189 94% 45%;
+        --primary-foreground: 0 0% 100%;
+        --secondary: 215 28% 17%;
+        --secondary-foreground: 0 0% 98%;
+        --muted: 215 28% 17%;
+        --muted-foreground: 215 20% 65%;
+        --accent: 189 94% 45%;
+        --accent-foreground: 0 0% 100%;
+        --destructive: 0 84% 60%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 215 28% 17%;
+        --input: 215 28% 17%;
+        --ring: 189 94% 45%;
+      }
+    }
+    
     /* Shadows */
     --shadow-glow: 0 0 40px hsla(192, 2%, 45%, 0.15);
     --shadow-card: 0 8px 32px hsla(258, 91%, 49%, 0.1);
 
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
   }
 
   .dark {

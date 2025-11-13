@@ -5,8 +5,17 @@ import Navbar from "../components/Navbar";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-blue-50">
-      <Navbar />
+    <div className="min-h-screen relative overflow-hidden bg-white dark:bg-slate-900">
+      <div className="absolute inset-0 flex items-center justify-center">
+        <img 
+          src="/src/assets/bgimag.jpg.png" 
+          alt="Background" 
+          className="max-w-[80%] max-h-[80%] object-contain opacity-20 dark:opacity-10"
+        />
+      </div>
+      <div className="relative z-10">
+        <div className="relative z-10">
+        <Navbar />
       
       {/* Hero Section */}
       <section className="pt-24 pb-16 md:pt-32 md:pb-24 px-4">
@@ -48,13 +57,13 @@ const Index = () => {
               </div>
             </div>
             <div className="relative">
-              <div className="bg-gradient-to-br from-blue-100 to-blue-50 rounded-2xl p-8 shadow-xl">
-                <div className="aspect-square bg-blue-100 rounded-xl overflow-hidden">
-                  <div className="w-full h-full flex items-center justify-center text-blue-300">
-                    <svg className="w-3/4 h-3/4" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
-                    </svg>
-                  </div>
+              <div className="rounded-2xl overflow-hidden shadow-xl">
+                <div className="aspect-square overflow-hidden">
+                  <img 
+                    src="/src/assets/profile.jpg" 
+                    alt="Igasubiza Vainqueur" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
               <div className="absolute -bottom-4 -right-4 bg-white px-4 py-2 rounded-lg shadow-md border border-slate-100">
@@ -251,10 +260,12 @@ const Index = () => {
             </div>
           </div>
           <div className="mt-8 pt-8 border-t border-slate-100 text-center text-sm text-slate-500">
-            <p>© 2024 Igasubiza Vainqueur. All rights reserved.</p>
+            <p> 2024 Igasubiza Vainqueur. All rights reserved.</p>
           </div>
         </div>
       </footer>
+        </div>
+      </div>
     </div>
   );
 };

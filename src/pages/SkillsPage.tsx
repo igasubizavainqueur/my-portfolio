@@ -28,26 +28,26 @@ const SkillsPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-blue-50">
+    <div className="min-h-screen bg-white dark:bg-slate-900 transition-colors duration-200">
       <Navbar />
       
       <main className="pt-24 pb-16 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h1 className="text-4xl font-bold text-slate-800 mb-4">My Skills</h1>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            <h1 className="text-4xl font-bold text-slate-800 dark:text-white mb-4">My Skills</h1>
+            <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
               A showcase of my technical expertise and professional skills
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             {/* Technical Skills */}
-            <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+            <div className="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700">
               <div className="flex items-center mb-6">
-                <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
-                  <Code className="w-5 h-5 text-blue-600" />
+                <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center mr-3">
+                  <Code className="w-5 h-5 text-blue-600 dark:text-blue-400" />
                 </div>
-                <h2 className="text-2xl font-bold text-slate-800">Technical Skills</h2>
+                <h2 className="text-2xl font-bold text-slate-800 dark:text-white">Technical Skills</h2>
               </div>
               
               <div className="space-y-6">
@@ -55,17 +55,17 @@ const SkillsPage = () => {
                   <div key={index} className="space-y-2">
                     <div className="flex justify-between items-center">
                       <div className="flex items-center space-x-2">
-                        <div className="text-blue-500">{skill.icon}</div>
-                        <span className="font-medium text-slate-800">{skill.name}</span>
+                        <div className="text-blue-500 dark:text-blue-400">{skill.icon}</div>
+                        <span className="font-medium text-slate-800 dark:text-slate-200">{skill.name}</span>
                       </div>
-                      <span className="text-sm text-slate-500">{skill.level}</span>
+                      <span className="text-sm text-slate-500 dark:text-slate-400">{skill.level}</span>
                     </div>
-                    <div className="w-full bg-slate-100 rounded-full h-2">
+                    <div className="w-full bg-slate-100 dark:bg-slate-700 rounded-full h-2">
                       <div 
                         className={`h-2 rounded-full ${
-                          skill.level === 'Advanced' ? 'bg-blue-600 w-5/6' : 
-                          skill.level === 'Intermediate' ? 'bg-blue-500 w-2/3' : 
-                          'bg-blue-400 w-1/2'
+                          skill.level === 'Advanced' ? 'bg-blue-600 dark:bg-blue-500 w-5/6' : 
+                          skill.level === 'Intermediate' ? 'bg-blue-500 dark:bg-blue-400 w-2/3' : 
+                          'bg-blue-400 dark:bg-blue-300 w-1/2'
                         }`}
                       ></div>
                     </div>
@@ -75,14 +75,14 @@ const SkillsPage = () => {
             </div>
 
             {/* Professional Skills */}
-            <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+            <div className="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700">
               <div className="flex items-center mb-6">
-                <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-blue-600">
+                <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center mr-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-blue-600 dark:text-blue-400">
                     <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                   </svg>
                 </div>
-                <h2 className="text-2xl font-bold text-slate-800">Professional Skills</h2>
+                <h2 className="text-2xl font-bold text-slate-800 dark:text-white">Professional Skills</h2>
               </div>
               
               <ul className="space-y-4">
@@ -93,7 +93,7 @@ const SkillsPage = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
-                    <span className="ml-3 text-slate-600">{skill}</span>
+                    <span className="ml-3 text-slate-600 dark:text-slate-300">{skill}</span>
                   </li>
                 ))}
               </ul>
