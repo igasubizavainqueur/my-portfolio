@@ -1,8 +1,9 @@
 import { ArrowDown, Github, Instagram, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
-import heroBg from "@/assets/cc.jpg";
-import profileImg from "@/assets/profile.jpg";
+// Images are now in the public folder
+const heroBg = "/images/cc.jpg";
+const profileImg = "/images/profile.jpg";
 
 const Hero = () => {
   const scrollToSection = (id: string) => {

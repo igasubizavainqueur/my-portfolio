@@ -8,7 +8,7 @@ const Index = () => {
     <div className="min-h-screen relative overflow-hidden bg-white dark:bg-slate-900">
       <div className="absolute inset-0 flex items-center justify-center">
         <img 
-          src="/src/assets/bgimag.jpg.png" 
+          src="/images/bgimag.jpg.png" 
           alt="Background" 
           className="max-w-[80%] max-h-[80%] object-contain opacity-20 dark:opacity-10"
         />
@@ -60,7 +60,7 @@ const Index = () => {
               <div className="rounded-2xl overflow-hidden shadow-xl">
                 <div className="aspect-square overflow-hidden">
                   <img 
-                    src="/src/assets/profile.jpg" 
+                    src="/images/profile.jpg" 
                     alt="Igasubiza Vainqueur" 
                     className="w-full h-full object-cover"
                   />
