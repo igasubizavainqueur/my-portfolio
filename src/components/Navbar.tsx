@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "./ui/button";
 import { Download, Sun, Moon } from "lucide-react";
 import { useTheme } from "next-themes";
@@ -6,6 +6,7 @@ import { useEffect } from "react";
 
 const Navbar = () => {
   const { theme, setTheme } = useTheme();
+  const location = useLocation();
 
   // This ensures the theme state is synced across all pages
   useEffect(() => {
@@ -52,10 +53,24 @@ const Navbar = () => {
               key={item.path}
               asChild 
               variant="ghost"
-              className="rounded-lg hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-slate-700 dark:hover:text-white transition-colors duration-200"
+              className={`relative rounded-lg transition-colors duration-200 ${
+                location.pathname === item.path 
+                  ? 'bg-pink-50 dark:bg-pink-900/20' 
+                  : 'hover:bg-blue-50 dark:hover:bg-slate-700'
+              }`}
             >
-              <Link to={item.path} className="capitalize px-4 py-2 text-sm font-medium text-slate-700 hover:text-blue-600">
+              <Link 
+                to={item.path} 
+                className={`capitalize px-4 py-2 text-sm font-medium ${
+                  location.pathname === item.path 
+                    ? 'text-pink-500 dark:text-pink-400 font-semibold' 
+                    : 'text-slate-700 dark:text-slate-300 hover:text-pink-500 dark:hover:text-pink-400'
+                } transition-colors duration-200`}
+              >
                 {item.name}
+                {location.pathname === item.path && (
+                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-pink-500 dark:bg-pink-400 rounded-full"></span>
+                )}
               </Link>
             </Button>
           ))}

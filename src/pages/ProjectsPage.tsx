@@ -29,7 +29,7 @@ const ProjectsPage = () => {
       title: "Portfolio Website",
       description: "A modern, responsive portfolio website showcasing my projects and skills. Features dark/light mode, project showcases, skills section, and contact form.",
       tags: ["React", "TypeScript", "Tailwind CSS", "Vite", "React Router"],
-      image: "/images/portfolio-screenshot.png",
+      image: "/images/bgimag.jpg.png",
       github: "https://github.com/igasubizavainqueur/hello-dev-show",
       demo: "https://igasubizavainqueur.github.io/hello-dev-show"
     },

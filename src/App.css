@@ -1,8 +1,127 @@
-#root {
-  max-width: 1280px;
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Make sure html and body take full viewport height */
+html, body, #root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Ensure body takes full viewport height */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+/* Main app container */
+.app-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow: visible;
+}
+
+/* Smooth scrolling for the entire app */
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+/* Ensure all sections are scrollable */
+section {
+  width: 100%;
+  min-height: 100vh;
+  padding: 5rem 1rem 2rem;
+  position: relative;
+  overflow: visible;
+}
+
+/* Main content wrapper */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  position: relative;
+  padding-top: 80px; /* Space for fixed header */
+}
+
+/* Main content area */
+.main-content {
+  flex: 1;
+  width: 100%;
+  position: relative;
+  overflow: visible;
+}
+
+/* Section styles */
+section {
+  width: 100%;
+  min-height: 100vh;
+  padding: 5rem 1rem 2rem;
+  position: relative;
+  overflow: visible;
+}
+
+/* Contact section specific styles */
+#contact {
+  min-height: auto;
+  padding: 2rem 1rem;
+  display: block;
+  overflow: visible;
+  position: relative;
+}
+
+/* Ensure content is not cut off */
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+  position: relative;
+  overflow: visible;
+}
+
+/* Container for contact content */
+#contact .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Ensure smooth scrolling for anchor links */
+html {
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: 80px; /* Space for fixed header */
+}
+
+/* Remove outline for accessibility but keep focus for keyboard navigation */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
 }
 
 .logo {
@@ -33,8 +152,63 @@
   }
 }
 
+/* Page Sections */
+section {
+  width: 100%;
+  min-height: calc(100vh - 80px); /* Account for header */
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  scroll-margin-top: 80px; /* Space for fixed header */
+}
+
+/* Contact Form Styling */
+.contact-form-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Card Styling */
 .card {
-  padding: 2em;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+  
+  section {
+    padding: 4rem 1rem;
+    min-height: auto;
+  }
+  
+  .contact-form-container {
+    padding: 1.5rem;
+  }
+}
+
+/* Dark Mode Variables */
+:root {
+  --card-bg: #ffffff;
+  --border-color: #e2e8f0;
+}
+
+[data-theme='dark'] {
+  --card-bg: #1e293b;
+  --border-color: #334155;
 }
 
 .read-the-docs {
